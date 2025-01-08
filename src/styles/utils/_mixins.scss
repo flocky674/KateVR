@@ -1,0 +1,58 @@
+@mixin hover($_property, $_toValue) {
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin onDesktopXL {
+  @media (min-width: 1900px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin pageGrid {
+  --columns: 2;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @include onTablet {
+    --columns: 6;
+    column-gap: 24px;
+  }
+
+  @include onDesktop {
+    --columns: 12;
+  }
+
+  @include onDesktopXL {
+    --columns: 16;
+  }
+}
+
+@mixin customScrollBar {
+  &::-webkit-scrollbar {
+    width: 1px;
+
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $highlight-text;
+  }
+}

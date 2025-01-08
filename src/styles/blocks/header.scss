@@ -1,0 +1,220 @@
+.header {
+  padding: 20px 0 55px;
+
+  @include onDesktopXL {
+    height: 100vh;
+    padding-top: 47px;
+  }
+
+  &__top {
+    @include onTablet {
+      margin-bottom: 55px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 80px;
+    }
+
+    @include onDesktopXL {
+      margin-bottom: 170px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      font-size: 26px;
+      line-height: 34px;
+      margin-top: 25px;
+      margin-bottom: 17px;
+
+      @include onTablet {
+        margin-top: 0;
+
+        & > span {
+          display: block;
+        }
+      }
+
+      @include onDesktop {
+        font-size: 46px;
+        line-height: 60px;
+        margin-bottom: 19px;
+      }
+
+      @include onDesktopXL {
+        font-size: 54px;
+        line-height: 70px;
+        margin-bottom: 35px;
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+
+      @include onDesktop {
+        margin-left: 90px;
+        margin-bottom: 30px;
+      }
+
+      @include onDesktopXL {
+        margin-bottom: 45px;
+      }
+    }
+
+    &-subtitle {
+      font-weight: 500;
+      margin-bottom: 10px;
+
+      @include onTablet {
+        max-width: 340px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 5px;
+      }
+
+      @include onDesktopXL {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-price {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: center;
+
+      @include onTablet {
+        text-align: start;
+      }
+
+      @include onDesktopXL {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &-button--play {
+      margin: 0 auto;
+      margin-bottom: 30px;
+
+      @include onDesktop {
+        margin: 0;
+        margin-bottom: 90px;
+      }
+
+      @include onDesktopXL {
+        margin-bottom: 170px;
+      }
+    }
+  }
+
+  &__swiper {
+    @include onTablet {
+      position: absolute;
+      width: 410px;
+      height: 350px;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    @include onDesktop {
+      width: 690px;
+      height: 550px;
+    }
+
+    @include onDesktopXL {
+      width: 1050px;
+      height: 900px;
+    }
+
+    &-progressbar.swiper-pagination-progressbar.swiper-pagination-horizontal {
+      position: relative;
+      height: 1px;
+    }
+  }
+
+  &__image {
+    display: block;
+    user-select: none;
+    min-width: 320px;
+    height: 172px;
+    background-image: url(../images/mobile/header--mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    z-index: -1;
+
+    @include onTablet {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 486px;
+      height: 439px;
+      background-image: url(../images/tablet/header--tablet.png);
+    }
+
+    @include onDesktop {
+      top: 10px;
+      width: 810px;
+      height: 688px;
+      background-image: url(../images/desktop/header-image-desktop.png);
+    }
+
+    @include onDesktopXL {
+      width: 1150px;
+      height: 988px;
+    }
+
+    &-2 {
+      background-image: url(../images/desktop/header-image-2.png);
+
+      @include onTablet {
+        top: 50px;
+        height: 300px;
+      }
+
+      @include onDesktop {
+        top: 150px;
+        right: 100px;
+        width: 600px;
+        height: 360px;
+      }
+
+      @include onDesktopXL {
+        top: 200px;
+        width: 900px;
+        height: 700px;
+      }
+    }
+
+    &-3 {
+      background-image: url(../images/desktop/header-image-3.png);
+
+      @include onTablet {
+        right: 20px;
+        width: 380px;
+      }
+
+      @include onDesktop {
+        top: 100px;
+        width: 670px;
+        height: 500px;
+      }
+
+      @include onDesktopXL {
+        width: 1000px;
+        height: 820px;
+      }
+    }
+
+  }
+}
